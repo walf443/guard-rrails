@@ -4,17 +4,15 @@ require 'rrails/server'
 
 module Guard
   class RemoteRails < Guard
-    def initialize(watchers=[], options={})
+    def initialize(watchers=[], options={ :rails_env => "development" })
       super
       @options = options
     end
 
     def start
       @pid = fork do
+        $0 = "guard[rrais][#{@options[:rails_env]}]"
         ::RemoteRails::Server.new(@options).start
-      end
-      loop do
-        break if Process.waitpid(@pid, Process::WNOHANG)
       end
     end
 
