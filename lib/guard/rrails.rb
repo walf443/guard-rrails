@@ -11,7 +11,7 @@ module Guard
 
     def start
       @pid = fork do
-        RemoteRails::Server.new(@options).start
+        ::RemoteRails::Server.new(@options).start
       end
       loop do
         break if Process.waitpid(@pid, Process::WNOHANG)
@@ -32,4 +32,6 @@ module Guard
       @pid = nil
     end
   end
+
+  Rrails = RemoteRails # for guard init.
 end
