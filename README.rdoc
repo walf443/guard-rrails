@@ -1,6 +1,18 @@
 = guard-rrails
 
-Description goes here.
+run rrails-server by guard.
+
+== Usage
+
+$ guard init rrails
+# edit your Guardfile
+$ bundle exec guard
+
+== SEE ALSO
+
+guard: https://github.com/guard/guard
+
+rrails: https://github.com/walf443/rrails
 
 == Contributing to guard-rrails
  
