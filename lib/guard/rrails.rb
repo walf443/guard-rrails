@@ -26,7 +26,7 @@ module Guard
     end
 
     def stop
-      Process.kill(@pid)
+      Process.kill('HUP', @pid)
       @pid = nil
     end
   end
