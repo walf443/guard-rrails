@@ -1,13 +1,11 @@
-GIT
-  remote: git://github.com/walf443/rrails.git
-  revision: 1757b9a3f0db0304164fa69153c4d7791367ce9a
-  specs:
-    rrails (0.1.0)
-
 GEM
   remote: http://rubygems.org/
   specs:
+    ffi (1.0.11)
     git (1.2.5)
+    guard (1.0.1)
+      ffi (>= 0.5.0)
+      thor (~> 0.14.6)
     jeweler (1.8.3)
       bundler (~> 1.0)
       git (>= 1.2.5)
@@ -17,18 +15,21 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
+    rrails (0.1.0)
     shoulda (3.0.1)
       shoulda-context (~> 1.0.0)
       shoulda-matchers (~> 1.0.0)
     shoulda-context (1.0.0)
     shoulda-matchers (1.0.0)
+    thor (0.14.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bundler
+  guard
   jeweler (~> 1.8.3)
   rdoc (~> 3.12)
-  rrails!
+  rrails
   shoulda
