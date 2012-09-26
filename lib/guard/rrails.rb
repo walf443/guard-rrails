@@ -11,7 +11,7 @@ module Guard
 
     def start
       @pid = fork do
-        $0 = "guard[rrais][#{@options[:rails_env]}]"
+        $0 = "guard[rrails][#{@options[:rails_env]}]"
         ::RemoteRails::Server.new(@options).start
       end
     end
@@ -21,12 +21,12 @@ module Guard
       self.start
     end
 
-    def run_on_change(paths_or_symbol)
+    def run_on_changes(paths_or_symbol)
       self.reload
     end
 
     def stop
-      Process.kill('HUP', @pid)
+      Process.kill('TERM', @pid)
       @pid = nil
     end
   end
