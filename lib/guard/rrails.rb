@@ -21,7 +21,7 @@ module Guard
       self.start
     end
 
-    def run_on_change(paths_or_symbol)
+    def run_on_changes(paths_or_symbol)
       self.reload
     end
 
