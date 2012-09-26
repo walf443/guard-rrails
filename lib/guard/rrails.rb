@@ -11,7 +11,7 @@ module Guard
 
     def start
       @pid = fork do
-        $0 = "guard[rrais][#{@options[:rails_env]}]"
+        $0 = "guard[rrails][#{@options[:rails_env]}]"
         ::RemoteRails::Server.new(@options).start
       end
     end
