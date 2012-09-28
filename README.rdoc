@@ -8,14 +8,6 @@ run rrails-server by guard.
     # edit your Guardfile
     $ bundle exec guard
 
-== Warning
-
-There is no gem that name is "rrails" yet.
-
-in your Gemfile.
-
-    gem 'rrails', :git => 'git://github.com/walf443/rrails.git'
-
 == SEE ALSO
 
 * guard: https://github.com/guard/guard
